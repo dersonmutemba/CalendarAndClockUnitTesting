@@ -1901,6 +1901,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
+      },
+      "CalendarLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/CalendarLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CalendarLibrary.dll": {}
+        }
       }
     }
   },
@@ -6761,10 +6771,16 @@
         "system.xml.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xmldocument.nuspec"
       ]
+    },
+    "CalendarLibrary/1.0.0": {
+      "type": "project",
+      "path": "../CalendarLibrary/CalendarLibrary.csproj",
+      "msbuildProject": "../CalendarLibrary/CalendarLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "CalendarLibrary >= 1.0.0",
       "MSTest.TestAdapter >= 2.2.10",
       "MSTest.TestFramework >= 2.2.10",
       "Microsoft.NET.Test.Sdk >= 17.3.2",
@@ -6795,7 +6811,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/derson/Documents/Visual Studio Code/CalendarAndClockUnitTesting/CalendarLibrary/CalendarLibrary.csproj": {
+              "projectPath": "/home/derson/Documents/Visual Studio Code/CalendarAndClockUnitTesting/CalendarLibrary/CalendarLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
