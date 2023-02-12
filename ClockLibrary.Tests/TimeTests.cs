@@ -97,7 +97,8 @@ public class TimeTests
     }
 
     [TestMethod]
-    public void PropertiesUpdateCorrectly() {
+    public void PropertiesUpdateCorrectly()
+    {
         var time = new Time("0:0");
         time.Minute = 20;
         var actual = time.Minute;
@@ -128,5 +129,11 @@ public class TimeTests
         actual = time.Minute;
         expected = 48;
         Assert.AreEqual(expected, actual);
+    }
+
+    [TestMethod]
+    public void AcceptsNumericValuesOnly()
+    {
+
     }
 }
