@@ -16,6 +16,10 @@ public class DateTests
         Assert.AreEqual(31, result.Day);
         Assert.AreEqual(12, result.Month);
         Assert.AreEqual(2012, result.Year);
+        result = new Date(" 31 / 12 / 2012 ");
+        Assert.AreEqual(31, result.Day);
+        Assert.AreEqual(12, result.Month);
+        Assert.AreEqual(2012, result.Year);
         result = new Date("1/1/2010");
         Assert.AreEqual(1, result.Day);
         Assert.AreEqual(1, result.Month);

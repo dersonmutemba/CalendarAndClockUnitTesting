@@ -8,7 +8,7 @@ public class Date
     {
         while (date.Contains(' '))
         {
-            date.Remove(date.IndexOf(' '));
+            date = date.Remove(date.IndexOf(' '), 1);
         }
         var dateItems = date.Split('/');
         if (dateItems.Length != 3)
