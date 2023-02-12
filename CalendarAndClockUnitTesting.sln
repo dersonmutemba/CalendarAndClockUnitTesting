@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarLibrary", "Calendar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarLibrary.Test", "CalendarLibrary.Test\CalendarLibrary.Test.csproj", "{042FBD23-A7C3-4834-A8A4-94A2A89C586F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockLibrary", "ClockLibrary\ClockLibrary.csproj", "{92A9B55A-35BA-4335-AF91-4F3F4EB78670}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockLibrary.Tests", "ClockLibrary.Tests\ClockLibrary.Tests.csproj", "{355FB6E5-5CBA-4ED2-83CA-FDF49CDF18D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{042FBD23-A7C3-4834-A8A4-94A2A89C586F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{042FBD23-A7C3-4834-A8A4-94A2A89C586F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{042FBD23-A7C3-4834-A8A4-94A2A89C586F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A9B55A-35BA-4335-AF91-4F3F4EB78670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A9B55A-35BA-4335-AF91-4F3F4EB78670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A9B55A-35BA-4335-AF91-4F3F4EB78670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A9B55A-35BA-4335-AF91-4F3F4EB78670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{355FB6E5-5CBA-4ED2-83CA-FDF49CDF18D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{355FB6E5-5CBA-4ED2-83CA-FDF49CDF18D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{355FB6E5-5CBA-4ED2-83CA-FDF49CDF18D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{355FB6E5-5CBA-4ED2-83CA-FDF49CDF18D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
