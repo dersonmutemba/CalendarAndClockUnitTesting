@@ -115,8 +115,6 @@ public class Date
 
     internal bool leapYear { get => _leapYear; }
 
-    public override int GetHashCode()
-    {
-        throw new NotImplementedException();
-    }
+    // override object.GetHashCode
+    public override int GetHashCode() => base.GetHashCode();
 }
