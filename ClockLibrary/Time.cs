@@ -64,4 +64,21 @@ public class Time
             _minute = value;
         }
     }
+
+    // override object.Equals
+    public override bool Equals(object? obj)
+    {
+        if (obj == null || GetType() != obj.GetType())
+        {
+            return false;
+        }
+
+        if (Hour == ((Time)obj).Hour && Minute == ((Time)obj).Minute)
+            return true;
+
+        return false;
+    }
+
+    // override object.GetHashCode
+    public override int GetHashCode() => base.GetHashCode();
 }
