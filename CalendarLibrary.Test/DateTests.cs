@@ -6,26 +6,44 @@ namespace CalendarLibrary.Test;
 public class DateTests
 {
     [TestMethod]
-    public void ValidDates()
+    public void AcceptsValidDateFormats()
     {
         var result = new Date("01/01/2001");
         Assert.AreEqual(1, result.Day);
         Assert.AreEqual(1, result.Month);
         Assert.AreEqual(2001, result.Year);
+        var expected = new Date(1, 1, 2001);
+        Assert.AreEqual(expected, result);
         result = new Date("31/12/2012");
         Assert.AreEqual(31, result.Day);
         Assert.AreEqual(12, result.Month);
         Assert.AreEqual(2012, result.Year);
+        expected = new Date(31, 12, 2012);
+        Assert.AreEqual(expected, result);
         result = new Date(" 31 / 12 / 2012 ");
         Assert.AreEqual(31, result.Day);
         Assert.AreEqual(12, result.Month);
         Assert.AreEqual(2012, result.Year);
+        expected = new Date(31, 12, 2012);
+        Assert.AreEqual(expected, result);
         result = new Date("1/1/2010");
         Assert.AreEqual(1, result.Day);
         Assert.AreEqual(1, result.Month);
         Assert.AreEqual(2010, result.Year);
+        expected = new Date(1, 1, 2010);
+        Assert.AreEqual(expected, result);
+    }
+
+    [TestMethod]
+    public void ThrowsExceptionOnInvalidFormats()
+    {
         Assert.ThrowsException<WrongDateFormatException>(() => new Date(""));
         Assert.ThrowsException<WrongDateFormatException>(() => new Date("02/02/2020/20"));
+    }
+
+    [TestMethod]
+    public void ThrowsExceptionOnCharactersPassedAsArguments()
+    {
         Assert.ThrowsException<NonNumericFieldException>(() => new Date("ab/01/2001"));
         Assert.ThrowsException<NonNumericFieldException>(() => new Date("01/ab/2001"));
         Assert.ThrowsException<NonNumericFieldException>(() => new Date("01//2001"));
