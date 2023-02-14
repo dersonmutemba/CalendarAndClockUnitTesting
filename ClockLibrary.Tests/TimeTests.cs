@@ -134,6 +134,10 @@ public class TimeTests
     [TestMethod]
     public void AcceptsNumericValuesOnly()
     {
-
+        Assert.ThrowsException<NonNumericFieldException>(() => new Time("aa:bb"));
+        Assert.ThrowsException<NonNumericFieldException>(() => new Time("0a:00"));
+        Assert.ThrowsException<NonNumericFieldException>(() => new Time("aa:00"));
+        Assert.ThrowsException<NonNumericFieldException>(() => new Time("00:aa"));
+        Assert.ThrowsException<NonNumericFieldException>(() => new Time("00:0a"));
     }
 }

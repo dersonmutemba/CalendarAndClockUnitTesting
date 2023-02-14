@@ -6,7 +6,7 @@ namespace CalendarLibrary.Test;
 public class CalendarLibraryTest
 {
     [TestMethod]
-    public void DatesDifference()
+    public void DatesDifferenceReturnsCorrectValue()
     {
         var actual = CalendarLibrary.Difference(new Date("10/10/2010"), new Date("11/10/2010"));
         var expected = 1;
@@ -38,7 +38,7 @@ public class CalendarLibraryTest
     }
 
     [TestMethod]
-    public void DatesAdd() {
+    public void DatesAddCorrectly() {
         var actual = CalendarLibrary.Add(new Date("10/10/2010"), 2);
         var expected = new Date("12/10/2010");
         Assert.AreEqual(expected, actual);
@@ -63,8 +63,6 @@ public class CalendarLibraryTest
         actual = CalendarLibrary.Add(new Date("10/12/2010"), 25);
         expected = new Date("04/01/2011");
         Assert.AreEqual(expected, actual);
-
-        Assert.ThrowsException<InvalidParameterException>(() => CalendarLibrary.Add(new Date("10/10/2010"), -1));
     }
 
     [TestMethod]
@@ -93,7 +91,11 @@ public class CalendarLibraryTest
         actual = CalendarLibrary.Subtract(new Date("04/01/2011"), 25);
         expected = new Date("10/12/2010");
         Assert.AreEqual(expected, actual);
+    }
 
+    [TestMethod]
+    public void ThrowsExceptionOnNegativeParameter() {
+        Assert.ThrowsException<InvalidParameterException>(() => CalendarLibrary.Add(new Date("10/10/2010"), -1));
         Assert.ThrowsException<InvalidParameterException>(() => CalendarLibrary.Subtract(new Date("10/10/2010"), -1));
     }
 
