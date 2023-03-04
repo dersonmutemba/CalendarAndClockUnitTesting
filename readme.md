@@ -2,7 +2,7 @@
 
 **_Learning how to write tests for code_**
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dersonmutemba/CalendarAndClockUnitTesting/dotnet.yml?style=plastic)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dersonmutemba/CalendarAndClockUnitTesting/dotnet.yml?style=plastic&logo=github)
 
 ## Purpose
 
