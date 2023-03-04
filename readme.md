@@ -2,6 +2,8 @@
 
 **_Learning how to write tests for code_**
 
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dersonmutemba/CalendarAndClockUnitTesting/dotnet.yml?style=plastic)
+
 ## Purpose
 
 This project was designed to test my knowledge of unit testing for C# code. The main purpose is to follow the principles of Test Driven Development (TDD).
